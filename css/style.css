@@ -26,8 +26,9 @@ header * {
 }
 
 header img {
-  width: 85px;
+  width: 70px;
   height: auto;
+  margin: 10px;
 }
 
 header i.fas {
@@ -69,6 +70,8 @@ header i.fas.active {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0 0 10px 0;
+  display: inline-block;
 }
 
 div#background-top {
@@ -87,7 +90,7 @@ div#background-top img {
 }
 
 #info {
-  margin-top: 214px;
+  margin-top: 225px;
   border-top: 7px solid #7de316;
 }
 
@@ -120,6 +123,10 @@ div#background-top img {
   margin: 15px 0;
 }
 
+.separator.green::before {
+  background-color: #7de316;
+}
+
 .feature {
   display: flex;
   flex-direction: column;
@@ -137,6 +144,58 @@ div#background-top img {
   font-size: 1.3rem;
 }
 
+#services {
+  display: flex;
+  flex-direction: column;
+  background-color: #293f45;
+  padding: 50px 0 50px 80px;
+}
+
+#services-slide {
+  width: 100%;
+  margin: 30px 0 60px 0;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.service {
+  flex: none;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+
+#void::before {
+  width: 80px;
+  display: block;
+  content: " ";
+}
+
+.card-header {
+  font-size: 1.2rem;
+  padding: 15px 0;
+}
+
+.card-body {
+  background-color: #7de316;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 0 5px 20px 5px;
+}
+
+.card-body a,
+.card-body a:link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
 #team-cards {
   display: flex;
   flex-direction: row;
@@ -144,12 +203,15 @@ div#background-top img {
   margin: 30px 0 0 0;
 }
 
+#team-cards .card {
+  flex-direction: row;
+  padding: 20px;
+}
+
 .card {
   display: flex;
-  flex-direction: row;
   width: 350px;
   margin: 0 30px 0 0;
-  padding: 20px;
   background-color: white;
   border-radius: 5px;
   -webkit-box-shadow: 0px 2.5px 10px -2.5px rgba(0, 0, 0, 0.25);
@@ -246,6 +308,66 @@ div#background-top img {
   -webkit-box-shadow: 0px 2.5px 10px -2.5px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 2.5px 10px -2.5px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2.5px 10px -2.5px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+  display: flex;
+  padding: 50px 80px;
+  background-color: #293f45;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+footer #col-1 {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+#social-networks {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#social-networks a,
+#social-networks a:link {
+  height: 32px;
+  width: 250px;
+  padding-left: 25px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  border-radius: 16px;
+}
+
+#social-networks a i {
+  margin-right: 10px;
+}
+
+#instagram-button {
+  background-color: #ffffff;
+  color: #5d5d5d;
+}
+
+#facebook-button {
+  background-color: #1886f5;
+  color: white;
+}
+
+#copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+footer img {
+  width: 75px;
 }
 
 form {
@@ -370,4 +492,18 @@ button.button {
 
 .italic {
   font-style: italic;
+}
+
+#services-slide::-webkit-scrollbar {
+  height: 5px;
+}
+
+#services-slide::-webkit-scrollbar-track {
+  background: #7de316;
+  border-radius: 2.5px;
+}
+
+#services-slide::-webkit-scrollbar-thumb {
+  background: #012319;
+  border-radius: 2.5px;
 }
